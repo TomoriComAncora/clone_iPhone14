@@ -1,20 +1,23 @@
 const buttons = document.querySelectorAll("#picker li");
 const image = document.querySelector("#product-image");
 const barBlur = document.querySelector("#picker-header");
-const titleRemove = document.querySelector("#picker-header #title");
-
-const idOriginal = titleRemove.id;
+const titleRemove = document.querySelector(" #title");
 
 let posicaoInicial = barBlur.getBoundingClientRect().top;
 
-const mudarPosicao = ()=>{
-    const posicaoAtual = barBlur.getBoundingClientRect().top;
-    if(posicaoAtual !== posicaoInicial){
-        titleRemove.remove();
-    }
+const mudarPosicao = () => {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-    posicaoInicial = posicaoAtual;
-}
+  if (scrollTop > posicaoInicial) {
+    titleRemove.style.visibility = "hidden";
+    barBlur.classList.add("aux");
+    barBlur.style.padding = ".4rem";
+  } else if (scrollTop <= 0) {
+    titleRemove.style.visibility = "visible";
+    barBlur.classList.remove("aux");
+  }
+  posicaoInicial = scrollTop;
+};
 
 window.addEventListener("scroll", mudarPosicao);
 

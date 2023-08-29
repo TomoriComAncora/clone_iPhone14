@@ -105,27 +105,31 @@ header nav {
 }
 
 #picker-header {
-  width: 100%;
+  width: 95%;
   margin-top: 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: sticky;
   top: 58px;
-  backdrop-filter: blur(60px);
+  backdrop-filter: blur(100px);
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+#picker-header.aux #title{
+  font-size: 1rem;
 }
 
 
 #picker-header #title {
-  font-size: 4rem;
+  font-size: 4.3rem;
   font-weight: 500;
   color: #cecece;
 }
 
 #picker #select-cor {
-  color: #cecece;
-  font-size: .9rem;
+  color: #F5F5F7;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -148,7 +152,7 @@ header nav {
   width: 1.2rem;
   border-radius: 50%;
   box-shadow: 1px 1px 1px;
-  border: 1px solid #cecece;
+  border: 2px solid #000000;
   pointer-events: none;
 }
 
