@@ -1,5 +1,22 @@
 const buttons = document.querySelectorAll("#picker li");
 const image = document.querySelector("#product-image");
+const barBlur = document.querySelector("#picker-header");
+const titleRemove = document.querySelector("#picker-header #title");
+
+const idOriginal = titleRemove.id;
+
+let posicaoInicial = barBlur.getBoundingClientRect().top;
+
+const mudarPosicao = ()=>{
+    const posicaoAtual = barBlur.getBoundingClientRect().top;
+    if(posicaoAtual !== posicaoInicial){
+        titleRemove.remove();
+    }
+
+    posicaoInicial = posicaoAtual;
+}
+
+window.addEventListener("scroll", mudarPosicao);
 
 buttons.forEach((btns) => {
   btns.addEventListener("click", (e) => {
