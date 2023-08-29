@@ -35,6 +35,11 @@ header nav {
   color: #fff;
 }
 
+#icons{
+  display: flex;
+  gap: 2rem;
+}
+
 #sticky-header {
   font-size: 0.8rem;
   padding: 1rem;
@@ -179,6 +184,7 @@ header nav {
 #main-container #product-image.changing{
   opacity: 0.3;
 }
+
 #product-image{
   margin-top: 5rem;
 }
@@ -210,4 +216,70 @@ header nav {
   font-size: 1.1rem;
   padding: .4rem 1rem;
   align-self: center;
+}
+
+@media(max-width: 350px){
+  #navbar li{
+    display: none;
+  }
+
+  #navbar{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #navbar #logo,
+  #navbar .icons{
+    display: flex;
+  }
+
+  #main-container #product-image{
+  max-width: 100%;
+  }
+
+  #sticky-header-links a{
+    display: none;
+  }
+
+  #sticky-header-inner .btn{
+    display: flex;
+  }
+
+  #ribbon a{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #main-container {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #picker-header{
+    display: flex;
+    flex-direction:column;
+  }
+
+  #picker-header #title{
+    font-size: 3rem;
+  }
+
+  #buy-now {
+    padding: 2rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+  #buy-now #title-buy{
+    font-size: 1.4rem;
+    margin: 0.2rem 1rem;
+    padding: 0;
+  }
+  
+  #buy-now #price{
+    font-size: 1rem;
+    margin: .2rem 1rem;
+    padding: 0;
+  }
 }
