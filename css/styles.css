@@ -218,7 +218,7 @@ header nav {
   align-self: center;
 }
 
-@media(max-width: 350px){
+@media(max-width: 450px){
   #navbar li{
     display: none;
   }
@@ -253,16 +253,18 @@ header nav {
   #main-container {
     padding: 0 1rem;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   #picker-header{
     display: flex;
     flex-direction:column;
+    position: static;
   }
 
   #picker-header #title{
     font-size: 3rem;
+    position: static;
   }
 
   #buy-now {
@@ -281,5 +283,11 @@ header nav {
     font-size: 1rem;
     margin: .2rem 1rem;
     padding: 0;
+  }
+}
+
+@media(max-width: 770px){
+  #product-image{
+    width: 90%;
   }
 }
