@@ -260,7 +260,7 @@ header nav {
     display: flex;
     flex-direction:column;
   }
-
+  
   #picker-header #title{
     font-size: 3rem;
   }
